@@ -1,0 +1,76 @@
+"MOM Experiment"
+1 1 1 0 0 0
+"prog",1800,"seconds",1,"days","Time"
+"visc",1800,"seconds",1,"days","Time"
+"surffluxes",1800,"seconds",1,"days","Time"
+
+#This is the field section of the diag_table.
+
+# Prognostic Ocean fields:
+#=========================
+
+"ocean_model","u","u","prog","all",.true.,"none",2
+"ocean_model","v","v","prog","all",.true.,"none",2
+"ocean_model","h","h","prog","all",.true.,"none",1
+"ocean_model","e","e","prog","all",.true.,"none",2
+"ocean_model","temp","temp","prog","all",.true.,"none",2
+#"ocean_model","umo","umo","prog","all",.true.,"none",2
+#"ocean_model","vmo","vmo","prog","all",.true.,"none",2
+"ocean_model","SSH","SSH","prog","all",.true.,"none",2
+"ocean_model","SST","SST","prog","all",.true.,"none",2
+"ocean_model","SSU","SSU","prog","all",.true.,"none",2
+"ocean_model","SSV","SSV","prog","all",.true.,"none",2
+
+
+# Viscosity Ocean fields:
+#=========================
+#"ocean_model","Kv_u","Kv_u","visc","all",.true.,"none",2
+#"ocean_model","Kv_v","Kv_v","visc","all",.true.,"none",2
+"ocean_model","Kd_interface","Kd_interface","visc","all",.true.,"none",2
+"ocean_model","Kd_shear","Kd_shear","visc","all",.true.,"none",2
+"ocean_model","Kd_ePBL","Kd_ePBL","visc","all",.true.,"none",2
+"ocean_model","ePBL_h_ML","ePBL_h_ML","visc","all",.true.,"none",2
+"ocean_model","h_ML","h_ML","visc","all",.true.,"none",2
+
+# Surface Forcing:
+#=================
+"ocean_model","taux","taux","surffluxes","all",.true.,"none",2
+"ocean_model","tauy","tauy","surffluxes","all",.true.,"none",2
+"ocean_model","ustar","ustar","surffluxes","all",.true.,"none",2
+"ocean_model","Tflx_dia_diff","Tflx_dia_diff","visc","all",.true.,"none",2
+"ocean_model","Bflx_dia_diff","Bflx_dia_diff","visc","all",.true.,"none",2
+"ocean_model","MLD_003","MLD_003","visc","all",.true.,"none",2
+"ocean_model","MLD_EN1","MLD_EN1","visc","all",.true.,"none",2
+"ocean_model","MSTAR","MSTAR","visc","all",.true.,"none",2
+"ocean_model","MSTAR_LT","MSTAR_LT","visc","all",.true.,"none",2
+"ocean_model","LA","LA","visc","all",.true.,"none",2
+"ocean_model","LA_MOD","LA_MOD","visc","all",.true.,"none",2
+"ocean_model","surface_stokes_x","surface_stokes_x","visc","all",.true.,"none",2
+"ocean_model","surface_stokes_y","surface_stokes_y","visc","all",.true.,"none",2
+"ocean_model","3d_stokes_x","3d_stokes_x","visc","all",.true.,"none",2
+"ocean_model","3d_stokes_y","3d_stokes_y","visc","all",.true.,"none",2
+"ocean_model","La_turbulent","La_turbulent","visc","all",.true.,"none",2
+#"ocean_model","stokes_shear_x_theory","dusdz_theory","visc","all",.true.,"none",2
+#"ocean_model","stokes_shear_y_theory","dvsdz_theory","visc","all",.true.,"none",2
+#"ocean_model","stokes_shear_x_theory_T","dusdz_theory_T","visc","all",.true.,"none",2
+#"ocean_model","stokes_shear_y_theory_T","dvsdz_theory_T","visc","all",.true.,"none",2
+#"ocean_model","net_heat_surface","net_heat_surface","surffluxes","all",.true.,"none",2
+"ocean_model","CAu_Stokes","CAu_Stokes","visc","all",.true.,"none",2
+"ocean_model","CAv_Stokes","CAv_Stokes","visc","all",.true.,"none",2
+"ocean_model","P_deltaStokes_i","P_deltaStokes_i","visc","all",.true.,"none",2
+"ocean_model","P_deltaStokes_L","P_deltaStokes_L","visc","all",.true.,"none",2
+"ocean_model","PFv_Stokes","PFv_Stokes","visc","all",.true.,"none",2
+"ocean_model","PFu_Stokes","PFu_Stokes","visc","all",.true.,"none",2
+"ocean_model","dvdt_Stokes","dvdt_Stokes","visc","all",.true.,"none",2
+"ocean_model","dudt_Stokes","dudt_Stokes","visc","all",.true.,"none",2
+"ocean_model","mstar_ePBL","mstar_ePBL","visc","all",.true.,"none",2
+"ocean_model","mstar_shear","mstar_shear","visc","all",.true.,"none",2
+"ocean_model","OSBL_Me_KS","OSBL_Me_KS","visc","all",.true.,"none",2
+"ocean_model","OSBL_Conv_KS","OSBL_Conv_KS","visc","all",.true.,"none",2
+"ocean_model","E_ePBL","E_ePBL","visc","all",.true.,"none",2
+"ocean_model","E_shear","E_shear","visc","all",.true.,"none",2
+"ocean_model","Hbl_est","Hbl_est","visc","all",.true.,"none",2
+"ocean_model","used_shear_flag","used_shear_flag","visc","all",.true.,"none",2
+"ocean_model","ePBL_LT_scale_raw","LT_raw","visc","all",.true.,"none",2
+"ocean_model","ePBL_LT_scale_top","LT_top","visc","all",.true.,"none",2
+#

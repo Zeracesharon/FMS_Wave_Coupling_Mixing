@@ -1,0 +1,1 @@
+../../era5/ERA5_t2m_2004_padded.nc

@@ -1,0 +1,1 @@
+../../era5/ERA5_u10_2004_padded.nc

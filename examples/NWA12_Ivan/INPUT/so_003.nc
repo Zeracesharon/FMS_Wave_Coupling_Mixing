@@ -1,0 +1,1 @@
+../../datasets1/glorys/updated_2024-01/so_003.nc

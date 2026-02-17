@@ -1,0 +1,1 @@
+../../era5/ERA5_ssrd_2004_padded.nc

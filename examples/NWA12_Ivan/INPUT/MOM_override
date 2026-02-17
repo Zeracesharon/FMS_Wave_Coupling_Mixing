@@ -1,0 +1,40 @@
+#override USE_generic_tracer = False
+#override MAX_FIELDS=500
+#override OBC_TIDE_NODAL_REF_DATE = 2004,7,2
+
+#override CHL_FROM_FILE = True
+#override DO_GEOTHERMAL = True
+
+
+#override MLD_ITERATION_GUESS = False
+#override REMAP_AUXILIARY_VARS = True
+#override DIABATIC_FIRST = False
+#override EQN_OF_STATE = "WRIGHT_FULL"
+#override DT = 300
+#override DT_THERM = 300.0 
+#
+#override USE_JACKSON_PARAM = True
+#override USE_RESTRICTIVE_TOLERANCE_CHECK = True 
+#override EPBL_USE_SHEAR_ENERGY_COUPLING = True
+#override EPBL_SHEAR_ENERGY_SHUTDOWN_ML = True
+#override EPBL_SHEAR_ENERGY_WARN_IF_NO_KS = True
+
+#override MIX_LEN_EXPONENT =1.0
+#override IS_KS_WEIGHT = True
+#override W_RATIO = 0.8
+#override SHEAR_ALPHA=1.0
+#override USTAR_MIN_THRE = 1.0e-2
+#override LT_SHEAR_FRAC_CAP = 100.0
+
+#override EPBL_LT_RESCALE_BY_SHEAR = False
+#override LT_ENHANCE_TOP = 1.0
+#override SHEAR_LT_MODE = preserve_fraction
+#override EPBL_LT_RESCALE_GAMMA=1
+#override SHEAR_EPBL_CAP=30
+#override SHEAR_EPBL_LT_CAP=10
+#override VERTEX_SHEAR = False
+#override USE_LEGACY_DIABATIC_DRIVER = False
+
+#override USE_WAVES = False
+#override USE_LA_LI2016=False
+#override EPBL_LT = False

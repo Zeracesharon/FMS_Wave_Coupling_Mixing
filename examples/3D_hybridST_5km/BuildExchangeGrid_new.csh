@@ -1,0 +1,24 @@
+#!/bin/tcsh
+#
+
+module load fre/bronx-23
+
+cd INPUT
+#This is to make the super-grid, so nlon=8 for a 4x4 model, nlon=4 for a 2x2 model.
+#make_hgrid --grid_type regular_lonlat_grid --nxbnd 2 --nybnd 2 --xbnd -140.2,-139.8 --ybnd -0.2,0.2 --nlon 8 --nlat 8 --grid_name ocean_hgrid
+#make_hgrid --grid_type regular_lonlat_grid --nxbnd 2 --nybnd 2 --xbnd -120.2,-119.8 --ybnd -0.2,0.2 --nlon 8 --nlat 8 --grid_name ocean_hgrid
+#make_hgrid --grid_type regular_lonlat_grid --nxbnd 2 --nybnd 2 --xbnd -1,1 --ybnd -1,1 --nlon 8 --nlat 8 --grid_name ocean_hgrid
+make_hgrid --grid_type simple_cartesian_grid --xbnd -13.5,13.5 --ybnd -8.1,8.1 --nlon 1200 --nlat 720 --simple_dx 2500 --simple_dy 2500 --grid_name ocean_hgrid
+
+make_solo_mosaic --num_tiles 1 --dir ./ --mosaic_name ocean_mosaic --tile_file ocean_hgrid.nc 
+
+make_solo_mosaic --num_tiles 1 --dir ./ --mosaic_name atmos_mosaic --tile_file ocean_hgrid.nc 
+
+make_solo_mosaic --num_tiles 1 --dir ./ --mosaic_name land_mosaic --tile_file ocean_hgrid.nc 
+
+make_solo_mosaic --num_tiles 1 --dir ./ --mosaic_name wave_mosaic --tile_file ocean_hgrid.nc
+
+
+make_topog --mosaic ocean_mosaic.nc --topog_type  rectangular_basin --bottom_depth 4000
+srun --ntasks=30 make_coupler_mosaic_parallel --atmos_mosaic atmos_mosaic.nc --land_mosaic land_mosaic.nc --ocean_mosaic ocean_mosaic.nc --ocean_topog topog.nc --mosaic_name grid_spec --check --verbose
+#make_coupler_mosaic --atmos_mosaic atmos_mosaic.nc --land_mosaic land_mosaic.nc --ocean_mosaic ocean_mosaic.nc --ocean_topog topog.nc --mosaic_name grid_spec --check --verbose

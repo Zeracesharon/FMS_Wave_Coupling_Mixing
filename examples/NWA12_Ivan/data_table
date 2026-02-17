@@ -1,0 +1,59 @@
+"ATM", "p_surf",             "msl",    "INPUT/ERA5_msl_2004_padded.nc",           "bilinear",  1.0
+"ATM", "p_bot",              "msl",    "INPUT/ERA5_msl_2004_padded.nc",           "bilinear",  1.0
+"ATM", "t_bot",              "t2m",    "INPUT/ERA5_t2m_2004_padded.nc",           "bilinear",  1.0
+"ATM", "sphum_bot",          "sphum",  "INPUT/ERA5_sphum_2004_padded.nc",          "bilinear",  1.0
+"ATM", "u_bot",              "u10",    "INPUT/ERA5_u10_2004_padded.nc",          "bicubic",   1.0
+"ATM", "v_bot",              "v10",    "INPUT/ERA5_v10_2004_padded.nc",          "bicubic",   1.0
+"ATM", "z_bot",              "",       "",                           "bilinear", 10.0
+"ATM", "gust",               "",       "",                           "bilinear",  1.0e-4
+"ATM", "o2_flux_pcair_atm",  "",       "",                           "none",      0.214
+"ATM", "co2_flux_pcair_atm", "mole_fraction_of_carbon_dioxide_in_air", "INPUT/mole_fraction_of_co2_extended_ssp245.nc", "bilinear", 1.0e-06
+"ATM", "co2_bot",            "mole_fraction_of_carbon_dioxide_in_air", "INPUT/mole_fraction_of_co2_extended_ssp245.nc", "bilinear", 1.0e-06
+"ATM", "co2_dvmr_restore",   "mole_fraction_of_carbon_dioxide_in_air", "INPUT/mole_fraction_of_co2_extended_ssp245.nc", "bilinear", 1.0e-06
+#
+"ICE", "lw_flux_dn"        , "strd",   "INPUT/ERA5_strd_2004_padded.nc",          "bilinear", 2.77778e-4
+"ICE", "sw_flux_vis_dir_dn", "ssrd",   "INPUT/ERA5_ssrd_2004_padded.nc",          "bilinear",  7.9167e-5
+"ICE", "sw_flux_vis_dif_dn", "ssrd",   "INPUT/ERA5_ssrd_2004_padded.nc",          "bilinear",  7.9167e-5
+"ICE", "sw_flux_nir_dir_dn", "ssrd",   "INPUT/ERA5_ssrd_2004_padded.nc",          "bilinear",  5.9722e-5
+"ICE", "sw_flux_nir_dif_dn", "ssrd",   "INPUT/ERA5_ssrd_2004_padded.nc",          "bilinear",  5.9722e-5
+"ICE", "lprec",              "lp",     "INPUT/ERA5_lp_2004_padded.nc",            "bilinear", 0.277777778
+"ICE", "fprec",              "sf",     "INPUT/ERA5_sf_2004_padded.nc",            "bilinear", 0.277777778
+"ICE", "runoff",             "runoff", "INPUT/glofas_runoff_2004.nc",     "none",      1.0
+"ICE", "calving",            "",       "",                           "none",      0.0
+"ICE", "dhdt",               "",       "",                           "none",     80.0
+"ICE", "dedt",               "",       "",                           "none",      2.0e-6
+"ICE", "drdt",               "",       "",                           "none",     10.0
+#
+"LND", "t_surf",             "",       "",                           "none",    273.0
+"LND", "t_ca",               "",       "",                           "none",    273.0
+"LND", "q_ca",               "",       "",                           "none",     0.0
+"LND", "rough_mom",          "",       "",                           "none",     0.01
+"LND", "rough_heat",         "",       "",                           "none",     0.1
+"LND", "albedo",             "",       "",                           "none",     0.1
+"LND", "sphum_surf",         "",       "",                           "none",     0.0
+"LND", "sphum_ca",           "",       "",                           "none",     0.0
+"LND", "t_flux",             "",       "",                           "none",     0.0
+"LND", "sphum_flux",         "",       "",                           "none",     0.0
+"LND", "lw_flux",            "",       "",                           "none",     0.0
+"LND", "sw_flux",            "",       "",                           "none",     0.0
+"LND", "lprec",              "",       "",                           "none",     0.0
+"LND", "fprec",              "",       "",                           "none",     0.0
+"LND", "dhdt",               "",       "",                           "none",     5.0
+"LND", "dedt",               "",       "",                           "none",     2.0e-6
+"LND", "dedq",               "",       "",                           "none",     0.0
+"LND", "drdt",               "",       "",                           "none",     5.0
+"LND", "drag_q",             "",       "",                           "none",     0.0
+"LND", "p_surf",             "",       "",                           "none",     1.0e5
+#
+"OCN" , "Usx1" , "Usx1" , "INPUT/StokesDriftBands_2004.nc" , "bilinear" , 1.0
+"OCN" , "Usy1" , "Usy1" , "INPUT/StokesDriftBands_2004.nc" , "bilinear" , 1.0
+"OCN" , "Usx2" , "Usx2" , "INPUT/StokesDriftBands_2004.nc" , "bilinear" , 1.0
+"OCN" , "Usy2" , "Usy2" , "INPUT/StokesDriftBands_2004.nc" , "bilinear" , 1.0
+"OCN" , "Usx3" , "Usx3" , "INPUT/StokesDriftBands_2004.nc" , "bilinear" , 1.0
+"OCN" , "Usy3" , "Usy3" , "INPUT/StokesDriftBands_2004.nc" , "bilinear" , 1.0
+"OCN" , "Usx4" , "Usx4" , "INPUT/StokesDriftBands_2004.nc" , "bilinear" , 1.0
+"OCN" , "Usy4" , "Usy4" , "INPUT/StokesDriftBands_2004.nc" , "bilinear" , 1.0
+"OCN" , "Usx5" , "Usx5" , "INPUT/StokesDriftBands_2004.nc" , "bilinear" , 1.0
+"OCN" , "Usy5" , "Usy5" , "INPUT/StokesDriftBands_2004.nc" , "bilinear" , 1.0
+"OCN" , "Usx6" , "Usx6" , "INPUT/StokesDriftBands_2004.nc" , "bilinear" , 1.0
+"OCN" , "Usy6" , "Usy6" , "INPUT/StokesDriftBands_2004.nc" , "bilinear" , 1.0

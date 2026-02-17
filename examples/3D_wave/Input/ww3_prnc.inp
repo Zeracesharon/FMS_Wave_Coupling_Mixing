@@ -1,0 +1,12 @@
+$ -------------------------------------------------------------------- $
+$ WAVEWATCH III Field preprocessor input file                          $
+$ -------------------------------------------------------------------- $
+$ For Wind:
+   'WND' 'LL' T T
+   lon lat
+   u10 v10
+   Wind_5km_10mi_wave.nc
+$   'ICE' 'LL' T T
+$   lon lat
+$   ICE
+$   JRA55-do-1p3.ice.2004.nc

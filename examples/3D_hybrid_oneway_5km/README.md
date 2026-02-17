@@ -1,0 +1,1 @@
+This example is used for one-way-coupled 3D simulations. Only the files and directories that differ are listed here; everything else is the same as in 3D_hybridST_5km. The linked wind- and wave-forcing files are not included to save space.

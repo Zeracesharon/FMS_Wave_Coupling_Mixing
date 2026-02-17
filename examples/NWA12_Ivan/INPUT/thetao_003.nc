@@ -1,0 +1,1 @@
+../../datasets1/glorys/updated_2024-01/thetao_003.nc

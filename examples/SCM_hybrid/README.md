@@ -1,0 +1,1 @@
+This folder uses hybrid approach to model SCM cases. It contains MOM_input files and various MOM_override files for hybrid ST, hybrid ST+LT nores, hybrid ST+LT res, RH18+shear, RH18+RL19+shear, KPP+shear, shear. All the rest files are the same with SCM_GLS_ST.
