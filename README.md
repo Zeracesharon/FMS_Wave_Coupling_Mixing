@@ -6,12 +6,12 @@ Generally, there are three different ways to obtain wave information: theoretica
 
 1) Theoretical Waves (LF17)
    
-1.	The theoretical wave aligns with the wind direction and uses wind information to directly calculate wave properties (wavenumber and wave height), and uses exponential decay for the vertical profile, and a finite difference method to obtain the Stokes drift shear. To use theoretical waves for LT, set USE_WAVES = True; WAVE_METHOD = LF17.
+(i) The theoretical wave aligns with the wind direction and uses wind information to directly calculate wave properties (wavenumber and wave height), and uses exponential decay for the vertical profile, and a finite difference method to obtain the Stokes drift shear. To use theoretical waves for LT, set USE_WAVES = True; WAVE_METHOD = LF17.
    
 2) One-way Coupling (Wave Forcing Input File)
-1.	For one way coupling, the wave information comes from a wave input file that contains dimensions of Time (unlimited); Lat and Lon; and wave number (we typically use 3-14 different wavenumber components ranging from 0 to 4). Variables are time, lon, lat and Usx_k (the x-direction of surface Stokes drift for a given wavenumber) and Usy_k (the y-direction of surface Stokes drift for a given wavenumber) where the time step and spatial domain should cover the required region and time duration otherwise FMS interpolation will report error. The recommended value and number of wavenumbers will be denoted in specific examples.
+(i)	For one way coupling, the wave information comes from a wave input file that contains dimensions of Time (unlimited); Lat and Lon; and wave number (we typically use 3-14 different wavenumber components ranging from 0 to 4). Variables are time, lon, lat and Usx_k (the x-direction of surface Stokes drift for a given wavenumber) and Usy_k (the y-direction of surface Stokes drift for a given wavenumber) where the time step and spatial domain should cover the required region and time duration otherwise FMS interpolation will report error. The recommended value and number of wavenumbers will be denoted in specific examples.
    
-Recommended wavenumbers used in the paper
+(ii) Recommended wavenumbers used in the paper
 We use 14 wavenumbers (WAVENUMBERS = [0.006, 0.01 , 0.02 , 0.04 , 0.06 , 0.08 , 0.1 , 0.2 , 0.4 , 0.6, 0.8 , 1. , 2. , 4. ]) in our one-way coupling simulation cases in the paper. Then the vertical profile of the Stokes drift value will be obtained by assuming exponential decay for each component. The way and script to obtain the wave-forcing input file will be given in the example 3D hurricane cases.
 Data table configuration (FMS)
 
@@ -28,7 +28,7 @@ SURFBAND_FILENAME = INPUT/Hurr.nc.
 
 3) Two-way Coupling (Coupled Ocean–Wave Model)
    
-2.	From a coupled model for two-way coupling, see the original folder (FMS_Wave_Coupling_Dec2020) for wave-current information exchange.
+(i)	From a coupled model for two-way coupling, see the original folder (FMS_Wave_Coupling_Dec2020) for wave-current information exchange.
 Settings
 For two-way coupling setup: In input.nml set do_waves=.true., set up WW3 grid and ww3_multi.inp, in MOM_override set: USE_WAVES = True; WAVE_METHOD = SURFACE_BANDS; SURFBAND_SOURCE = COUPLER; STK_BAND_COUPLER = 3; The details of how to set up the wave model can be referred to the specific example.
 If you consider the LT effects within the ePBL framework, then turn wave off, you set:
