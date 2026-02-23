@@ -20,5 +20,5 @@ make_solo_mosaic --num_tiles 1 --dir ./ --mosaic_name wave_mosaic --tile_file oc
 
 
 make_topog --mosaic ocean_mosaic.nc --topog_type  rectangular_basin --bottom_depth 4000
-srun --ntasks=30 make_coupler_mosaic_parallel --atmos_mosaic atmos_mosaic.nc --land_mosaic land_mosaic.nc --ocean_mosaic ocean_mosaic.nc --ocean_topog topog.nc --mosaic_name grid_spec --check --verbose
+srun --ntasks=60 make_coupler_mosaic_parallel --atmos_mosaic atmos_mosaic.nc --land_mosaic land_mosaic.nc --ocean_mosaic ocean_mosaic.nc --ocean_topog topog.nc --mosaic_name grid_spec --check --verbose
 #make_coupler_mosaic --atmos_mosaic atmos_mosaic.nc --land_mosaic land_mosaic.nc --ocean_mosaic ocean_mosaic.nc --ocean_topog topog.nc --mosaic_name grid_spec --check --verbose
