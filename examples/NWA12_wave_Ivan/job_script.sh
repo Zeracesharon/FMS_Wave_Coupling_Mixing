@@ -8,9 +8,9 @@
 #SBATCH --qos=normal
 #SBATCH --partition=batch
 #SBATCH --clusters=c6
-#SBATCH --account=bil-coastal-gfdl
+#SBATCH --account=your division
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=qx7402@princeton.edu
+#SBATCH --mail-user=your email
 
 
 # Avoid job errors because of filesystem synchronization delays
