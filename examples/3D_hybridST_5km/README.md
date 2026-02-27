@@ -20,6 +20,6 @@ Now that you have built the grid and linked the input wind file, you can run the
 
 If you want to run in interactive mode, use: nohup bash single.sh > submit_jobs.log 2>&1 &. Modify line 2 of single.sh to change the name of the output folder.
 
-If you want to submit a batch job, use: nohup bash srun.sh > submit_jobs.log 2>&1 &, which will submit the job defined in job_script.sh. Modify lines 5 and 44 to change the output folder name and the archive destination (for the analysis node), respectively.
+If you want to submit a batch job, use: nohup bash srun.sh > submit_jobs.log 2>&1 &, which will submit the job defined in job_script.sh. Modify lines 5 and 44 to change the output folder name and the archive destination (for the analysis node), respectively. Just to remember, when you use single.sh or srun.sh, you need to replace the exe directory for MOM6 or MOM6-SIS2, directory of your archive folder, and directory of the postprocessing exe (ww3_ounf). Also, job_script.sh needs to be modified to your account/division information.
 
 Note that for different hurricane translation speeds, you only need to link the corresponding wind-forcing files (and wave-forcing files, if applicable) into the INPUT/ directory and add them to data_table.
