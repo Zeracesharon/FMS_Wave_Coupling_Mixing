@@ -2085,6 +2085,8 @@ subroutine Stokes_PGF(G, GV, US, dz, u, v, PFu_Stokes, PFv_Stokes, CS )
         dP_Stokes_r_dz = 0.0
         dP_Stokes_l = 0.0
         dP_Stokes_r = 0.0
+        dP_lay_Stokes_l=0.0
+        dP_lay_Stokes_r=0.0
         ! ==================== LF17 short-circuit (no bands) ====================
         if (CS%WaveMethod == LF17) then
           ! ---- Interface Stokes at the TOP (k) and BOTTOM (k+1) of the current layer
@@ -2238,6 +2240,8 @@ subroutine Stokes_PGF(G, GV, US, dz, u, v, PFu_Stokes, PFv_Stokes, CS )
         dP_Stokes_r_dz = 0.0
         dP_Stokes_l = 0.0
         dP_Stokes_r = 0.0
+        dP_lay_Stokes_l=0.0
+        dP_lay_Stokes_r=0.0
         ! ==================== LF17 short-circuit (no bands) ====================
         if (CS%WaveMethod == LF17) then
           if (G%mask2dT(i,j) > 0.5) then
